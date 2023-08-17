@@ -13,7 +13,7 @@ app.get("/", (req,res) => {
 });
 
 
-const apikey='ec0a35e68dmsh04453053bfbc39fp124670jsn177fbe8632aa'; 
+const apikey='apikey'; 
 const apihost='imdb8.p.rapidapi.com';
 
 
