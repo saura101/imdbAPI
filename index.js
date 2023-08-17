@@ -34,35 +34,33 @@ app.post("/", async (req,res)=> {
         console.log("hello ji kaise ho saare");
         //console.log(response.data.results);
         const result=response.data.results;
-        let movie=[];
-        let rating=[];
+        let movie;
         for(let i=0;i<result.length;i++)
         {
             if(result[i].titleType)
             {
                 if(result[i].titleType=='movie')
                 {
-                    let mvid=result[i].id.slice(7,-1);
-                    const response1= await axios.get("https://imdb8.p.rapidapi.com/title/get-ratings",{
-                    params : {
-                        tconst : mvid
-                    },
-                    headers :{
-                        'X-RapidAPI-Key': apikey,
-                    'X-RapidAPI-Host' : apihost
-
-                    }
-                    });
-                    rating.push(response1.data.rating);
-                    movie.push(result[i]);
-                    if(movie.length==3)
-                        break;
+                    movie=result[i];
+                    break;
                 }
             }
         }
         console.log(movie);
+        let mvid=movie.id.slice(7,-1);
+        const response1= await axios.get("https://imdb8.p.rapidapi.com/title/get-ratings",{
+            params : {
+                tconst : mvid
+            },
+            headers :{
+                'X-RapidAPI-Key': apikey,
+                'X-RapidAPI-Host' : apihost
+
+            }
+       });
+       console.log(response1.data.rating);
         res.render("index.ejs",{movie: movie,
-            rate:rating
+            rating: response1.data.rating
         });
     } catch(error) {
         console.log(error.message);
