@@ -13,11 +13,7 @@ app.get("/", (req,res) => {
 });
 
 
-<<<<<<< HEAD
 const apikey='insert apikey'; 
-=======
-const apikey='apikey'; 
->>>>>>> 7fbb41abaf98f323e9d784abb63040e3f8d4875d
 const apihost='imdb8.p.rapidapi.com';
 
 
