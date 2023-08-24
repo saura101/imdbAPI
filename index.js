@@ -13,7 +13,7 @@ app.get("/", (req,res) => {
 });
 
 
-const apikey='insert apikey'; 
+const apikey=process.env.apikey;
 const apihost='imdb8.p.rapidapi.com';
 
 
