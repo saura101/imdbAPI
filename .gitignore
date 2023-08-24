@@ -3,3 +3,4 @@ package-lock.json
 apikey.txt
 # Local Netlify folder
 .netlify
+.env
