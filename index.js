@@ -16,8 +16,7 @@ app.get("/", (req,res) => {
 const apikey=process.env.apikey;
 const apihost='imdb8.p.rapidapi.com';
 
-if(apikey === null || apikey === "")
-    console.log("no key");
+
 app.post("/", async (req,res)=> {
     let title=req.body.title;
     try {
@@ -67,7 +66,7 @@ app.post("/", async (req,res)=> {
         });
     } catch(error) {
         console.log(error.message);
-        res.render("index.ejs", {error : apikey});
+        res.render("index.ejs", {error : error.message});
     }
 });
 
