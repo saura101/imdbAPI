@@ -67,7 +67,7 @@ app.post("/", async (req,res)=> {
         });
     } catch(error) {
         console.log(error.message);
-        res.render("index.ejs", {error : "some error"});
+        res.render("index.ejs", {error : apikey});
     }
 });
 
