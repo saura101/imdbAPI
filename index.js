@@ -1,6 +1,7 @@
 import express from "express";
 import axios from "axios";
 import bodyParser from "body-parser";
+import "dotenv/config";
 
 const app=express();
 const port=3000;
@@ -13,7 +14,7 @@ app.get("/", (req,res) => {
 });
 
 
-const apikey=process.env.apikey;
+const apikey=process.env.APIKEY;
 const apihost='imdb8.p.rapidapi.com';
 
 
