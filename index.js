@@ -1,6 +1,7 @@
 import express from "express";
 import axios from "axios";
 import bodyParser from "body-parser";
+import "dotenv/config";
 
 const app=express();
 const port=3000;
@@ -23,7 +24,7 @@ app.post("/", async (req,res)=> {
         const response= await axios.get("https://imdb8.p.rapidapi.com/title/find",{
             params: {
                 q : title,
-                limit : 15
+                
             }, 
             headers :{
                 'X-RapidAPI-Key': apikey,
