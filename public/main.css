@@ -82,3 +82,58 @@ h1
 {
     color:rgb(157, 241, 241);
 }
+
+.card-deck .card {
+    min-width: 0;
+    min-height: 0;
+    margin-top: 2%;
+    margin-bottom: 5%;
+}
+
+h2 {
+    font-size: 1.7rem;
+    margin-top: 2%;
+        color:chartreuse;
+        text-shadow: 0 0 5px chartreuse,
+                    0 0 10px chartreuse,
+                    0 0 20px #009914,
+                    0 0 30px #009914,
+                    0 0 40px #009914,
+                    0 0 55px #009914,
+                    0 0 70px #009914,
+                    0 0 85px #009914;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  background-color: #c6c6c6;
+  width: 5vh;
+  height: 5vh;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-5%);
+}
+
+.neww {
+    color:black;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 1rem;
+    margin-left: 60%;
+    margin-right: 10px;
+    line-height: 20px;
+}
+
+.neww a{
+    color:black;
+    text-decoration: none;
+}
+
+.btn-cont {
+    display: flex;
+}
+
+.card-deck {
+    margin-left: 100px;
+    margin-right: 100px;
+}
