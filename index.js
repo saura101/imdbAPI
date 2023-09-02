@@ -152,6 +152,6 @@ app.post("/search", async (req,res)=> {
     }
 });
 
-app.listen(port, ()=> {
+app.listen(PORT, ()=> {
     console.log(`server is running on port ${PORT}`);
 });
