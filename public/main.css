@@ -137,3 +137,24 @@ h2 {
     margin-left: 100px;
     margin-right: 100px;
 }
+
+.drop {
+    margin:auto;
+    margin-left: 2%;
+    margin-top:3%;
+    background-color: chartreuse;
+    color:#fff;
+    text-shadow: 0 0 5px #fff,
+    0 0 20px chartreuse,
+    0 0 30px chartreuse;
+}
+
+.dropdown-menu {
+    background-color: rgb(91, 183, 0);
+    color:rgba(43, 67, 45,0.7);
+    margin-left: 2%;
+}
+
+.dropdown {
+    margin-bottom: 2%;
+}

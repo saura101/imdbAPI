@@ -44,6 +44,52 @@
         <% } %>
     </div>
 
+    <div class="dropdown">
+        <a class="btn btn-secondary dropdown-toggle drop" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+           <% if(locals.genre) {%>
+            <%= genre[0].ge %>
+           <% } else {%>
+            Search by genre
+            <% } %>
+        </a>
+      
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+          <a class="dropdown-item" href="/genre/action">action</a>
+          <a class="dropdown-item" href="/genre/adventure">adventure</a>
+          <a class="dropdown-item" href="/genre/animation">animation</a>
+          <a class="dropdown-item" href="/genre/biography">biography</a>
+          <a class="dropdown-item" href="/genre/comedy">comedy</a>
+          <a class="dropdown-item" href="/genre/crime">crime</a>
+          <a class="dropdown-item" href="/genre/documentary">documentary</a>
+          <a class="dropdown-item" href="/genre/drama">drama</a>
+          <a class="dropdown-item" href="/genre/family">family</a>
+          <a class="dropdown-item" href="/genre/fantasy">fantasy</a>
+          <a class="dropdown-item" href="/genre/film-noir">film-noir</a>
+          <a class="dropdown-item" href="/genre/history">history</a>
+          <a class="dropdown-item" href="/genre/horror">horror</a>
+          <a class="dropdown-item" href="/genre/mystery">mystery</a>
+          <a class="dropdown-item" href="/genre/romance">romance</a>
+          <a class="dropdown-item" href="/genre/sci-fi">sci-fi</a>
+          <a class="dropdown-item" href="/genre/sport">sport</a>
+          <a class="dropdown-item" href="/genre/thriller">thriller</a>
+          <a class="dropdown-item" href="/genre/war">war</a>
+        </div>
+      </div>
+
+    <% if(locals.genre) {%>
+        <div class="card-deck">
+            <% for(let i=0;i<3;i++) { %>
+                <div class="card">
+                    <img class="card-img-top" src=<%= genre[i].image %> alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title"><%= genre[i].name %></h5>
+                      <p class="card-text"><%= genre[i].year %></p>
+                    </div>
+                </div>
+            <% } %>
+        </div>
+    <% } %>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 </body>
 </html>
